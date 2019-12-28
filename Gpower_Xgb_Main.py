@@ -116,8 +116,8 @@ model_final = xgb.train(params_new, dtrain, evals=watchlist,
                         early_stopping_rounds=early_stop, verbose_eval=True)
 
 # save trained model
-model_final.save_model('/clever/output/models/xgboost-trained.model')
-model_final.dump_model('/clever/output/models/dump.raw.txt')
+model_final.save_model('/clever/output/models/xgboost-time-series/xgboost-trained.model')
+model_final.dump_model('/clever/output/models/xgboost-time-series/dump.raw.txt')
 
 print('-----Xgboost Using Datetime Features Only------',
       '\n---Grid Search model feature importance---')
