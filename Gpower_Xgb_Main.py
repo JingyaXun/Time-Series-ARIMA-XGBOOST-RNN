@@ -115,6 +115,10 @@ params_new = {**params_sk, **search_sk.best_params_}
 model_final = xgb.train(params_new, dtrain, evals=watchlist,
                         early_stopping_rounds=early_stop, verbose_eval=True)
 
+# save trained model
+model_final.save_model('xgboost-trained.model')
+model_final.dump_model('dump.raw.txt')
+
 print('-----Xgboost Using Datetime Features Only------',
       '\n---Grid Search model feature importance---')
 importance = model_final.get_fscore()
