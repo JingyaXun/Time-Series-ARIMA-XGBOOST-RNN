@@ -17,7 +17,7 @@ config_plot()
 # get data
 N_rows = 18000
 parse_dates = [['Date', 'Time']]
-filename = "household_power_consumption.txt"
+filename = "/clever/input/datasets/xgboost-timeseries/household_power_consumption.txt"
 encode_cols = ['Month', 'DayofWeek', 'Hour']
 
 df = preprocess(N_rows, parse_dates, filename)
